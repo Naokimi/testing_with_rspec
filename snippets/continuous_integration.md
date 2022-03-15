@@ -54,9 +54,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby
-        uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 'RUBY_VERSION'
+          ruby-version: 'RUBY_VERSION' # needs to be inside quotes
       - name: Install dependencies
         run: bundle install
       - name: Create DB
