@@ -1,5 +1,7 @@
 # Continuous Integration
 
+Create a file `.github/workflows/ruby.yml` and copy the code snippet below
+
 Remember to swap RUBY_VERSION and PSQL_VERSION in the code below for the versions in your machine
 
 Commands to get the data:
