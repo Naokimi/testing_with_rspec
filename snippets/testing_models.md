@@ -46,8 +46,20 @@ RSpec.describe Task, type: :model do
   end
 
   describe '#truncated_description' do
-    it 'returns truncated description' do
-      expect(task.truncated_description).to eq('Once upon a...')
+    context 'with long description' do
+      it 'returns truncated description' do
+        expect(task.truncated_description).to eq('Once upon a...')
+      end
+    end
+    
+    context 'with short description' do
+      before do
+        task.description = 'Hello'
+      end
+    
+      it 'returns full description' do
+        expect(task.truncated_description).to eq('Hello')
+      end
     end
   end
 end
